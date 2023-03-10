@@ -9,7 +9,7 @@ auth_ns = Namespace('auth')
 class AuthView(Resource):
     def post(self):
         data = request.json
-        username = data.get('usernsme')
+        username = data.get('username')
         password = data.get('password')
         if not all([username, password]):
             return "", 400
